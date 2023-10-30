@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    long s = 0, n, d;
+    
+    cin >> n;
+    
+    s += 1;
+    s += n;
+        
+    for(d = 2; d * d < n; d++)
+    {
+        if(n % d == 0)
+        {
+            s += d;
+            s += (n / d);
+        }
+    }
+    
+    if(s % n == 0)
+    {
+        cout << "DA";
+    }
+    else
+    {
+        cout << "NU";
+    }
+    
+    return 0;
+}
